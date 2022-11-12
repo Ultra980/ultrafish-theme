@@ -1,6 +1,6 @@
 function fish_prompt
   set -l dir (prompt_pwd)
-  set -l branch (command git symbolic-ref HEAD | sed -e 's|^refs/heads/||')
+  set -l branch (command git symbolic-ref HEAD 2> /dev/null | sed -e 's|^refs/heads/||')
   set -l bwhite (set_color --bold white)
   set -l blblue (set_color --bold 02f4f4)
   set -l bteal (set_color --bold 02f4c0)
