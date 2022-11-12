@@ -1,9 +1,14 @@
 function fish_prompt
-  set -l cwd (prompt_pwd)
+  set -l dir (prompt_pwd)
   set -l branch (command git symbolic-ref HEAD | sed -e 's|^refs/heads/||')
-  printf "\n $USER @ $(hostname) $cwd \n"
+  set -l bwhite (set_color --bold white)
+  set -l blblue (set_color --bold 02f4f4)
+  set -l bteal (set_color --bold 02f4c0)
+  set_color --bold white
+  printf "\n $bteal$USER$bwhite@$(hostname) $blblue$dir$bwhite \n"
   if test -n "$branch"
-      set_color blue
-      printf "  $branch "
+    set_color 0ef9ee
+    printf "  $branch "
+  end
   printf "  "
 end
