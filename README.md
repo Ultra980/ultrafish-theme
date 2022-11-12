@@ -29,7 +29,7 @@ This is still under development and might break at any point. Use at your own ri
 ## Screenshot
 
 <p align="center">
-<img src="{{SCREENSHOT_URL}}">
+<img src="./screenshot.png">
 </p>
 
 
