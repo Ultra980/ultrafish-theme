@@ -4,10 +4,11 @@ function fish_prompt
   set -l bwhite (set_color --bold white)
   set -l blblue (set_color --bold 02f4f4)
   set -l bteal (set_color --bold 02f4c0)
+  set -l bgreen (set_color --bold green)
   set_color --bold white
-  printf "\n $bteal$USER$bwhite@$(hostname) $blblue$dir$bwhite \n"
+  printf "\n $bteal $USER$bwhite@$(hostname) $blblue  $dir$bwhite \n"
   if test -n "$branch"
-    set_color 0ef9ee
+    set_color --bold green
     printf "  $branch "
   end
   printf "  "
